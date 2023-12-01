@@ -76,12 +76,9 @@ char *get_content(char *file_name)
     return file_content;
 }
 
-int main(int argc, char **argv)
+int ex1(char *file_name)
 {
-    if (check_error(argc, argv) == 1)
-        return 84;
-    char *file_content = get_content(argv[1]);
+    char *file_content = get_content(file_name);
     int base_power = my_get_number(file_content);
-    printf("%d\n", power_after(4, base_power));
-    return 0;
+    return power_after(4, base_power);
 }
